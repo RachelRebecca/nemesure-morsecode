@@ -80,7 +80,7 @@ public class MorseCodeFrame extends JFrame
 
     private void onClickedTranslateToEnglish(ActionEvent actionEvent)
     {
-        if (morseExpression.getText() == null || morseExpression.getText().equals(""))
+        if (morseExpression.getText() == null || morseExpression.getText().strip().equals(""))
         {
             morseExpression.setText("Make sure to enter some Morse Code before clicking on Translate To English");
         }
@@ -94,7 +94,7 @@ public class MorseCodeFrame extends JFrame
 
     private void onClickedTranslateToMorse(ActionEvent actionEvent)
     {
-        if (englishExpression.getText() == null || englishExpression.getText().equals(""))
+        if (englishExpression.getText() == null || englishExpression.getText().strip().equals(""))
         {
             englishExpression.setText("Make sure to enter some Morse Code before clicking on Translate To Morse");
         }
