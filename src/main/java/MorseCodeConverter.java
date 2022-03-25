@@ -30,7 +30,9 @@ public class MorseCodeConverter
                 }
             }
             if (letterTranslated)
+            {
                 morseExpression.append("/");
+            }
         }
 
         return morseExpression.toString();

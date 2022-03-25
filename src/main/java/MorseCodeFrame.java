@@ -110,14 +110,14 @@ public class MorseCodeFrame extends JFrame
         englishExpression.setText(text);
     }
 
-    public JTextArea getMorseExpression()
+    public String getMorseExpressionText()
     {
-        return morseExpression;
+        return morseExpression.getText();
     }
 
-    public JTextArea getEnglishExpression()
+    public String getEnglishExpressionText()
     {
-        return englishExpression;
+        return englishExpression.getText();
     }
 
     public static void main(String[] args)
