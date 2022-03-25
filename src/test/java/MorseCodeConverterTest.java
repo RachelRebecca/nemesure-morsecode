@@ -8,7 +8,8 @@ class MorseCodeConverterTest
     public void toEnglish()
     {
         //given
-        MorseCodeConverter codeConverter = new MorseCodeConverter();
+        MorseCode morseCode = new MorseCode();
+        MorseCodeConverter codeConverter = new MorseCodeConverter(morseCode);
         String expression = ".- / --.- ..- .. -.-. -.- / .-- --- .-. -.. / .-- .. - .... / " +
                 ".-. .- -.-. .... . .-.. .----. .../ -- --- -- ..--..";
 
@@ -20,7 +21,8 @@ class MorseCodeConverterTest
     public void toMorseCode()
     {
         //given
-        MorseCodeConverter codeConverter = new MorseCodeConverter();
+        MorseCode morseCode = new MorseCode();
+        MorseCodeConverter codeConverter = new MorseCodeConverter(morseCode);
         String expression = "A QUICK [WORD WITH RACHEL'S MOM]?";
 
         //when and then

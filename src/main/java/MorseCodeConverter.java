@@ -2,9 +2,9 @@ public class MorseCodeConverter
 {
     private final MorseCode morseCode;
 
-    public MorseCodeConverter()
+    public MorseCodeConverter(MorseCode morseCode)
     {
-        this.morseCode = new MorseCode();
+        this.morseCode = morseCode;
     }
 
     public String toMorseCode(String englishExpression)
