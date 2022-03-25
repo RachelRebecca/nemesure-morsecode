@@ -89,6 +89,11 @@ public class MorseCodeFrame extends JFrame
             englishExpression.setText("");
 
             presenter.translateToEnglish(morseExpression.getText());
+
+            if (englishExpression.getText() == null || englishExpression.getText().equals(""))
+            {
+                englishExpression.setText("Couldn't translate to English");
+            }
         }
     }
 
@@ -96,13 +101,18 @@ public class MorseCodeFrame extends JFrame
     {
         if (englishExpression.getText() == null || englishExpression.getText().strip().equals(""))
         {
-            englishExpression.setText("Make sure to enter some Morse Code before clicking on Translate To Morse");
+            englishExpression.setText("Make sure to enter some English text before clicking on Translate To Morse");
         }
         else
         {
             morseExpression.setText("");
 
             presenter.translateToMorse(englishExpression.getText());
+
+            if (morseExpression.getText() == null || morseExpression.getText().equals(""))
+            {
+                morseExpression.setText("Couldn't translate to Morse");
+            }
         }
     }
 
