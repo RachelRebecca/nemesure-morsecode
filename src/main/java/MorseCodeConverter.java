@@ -21,15 +21,8 @@ public class MorseCodeConverter
 
             for (String letter : englishLetters)
             {
-                for (Character key : morseCode.getMorseCharacters().keySet())
-                {
-                    String keyString = key.toString();
-                    if (letter.equals(keyString))
-                    {
-                        morseExpression.append(morseCode.getMorseCharacters().get(key)).append(" ");
-                        break;
-                    }
-                }
+                 String morse = morseCode.getMorseCharacters().get(letter.charAt(0));
+                 morseExpression.append(morse == null? "" : morse + " ");
             }
             morseExpression.append("/");
         }

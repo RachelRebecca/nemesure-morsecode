@@ -21,7 +21,7 @@ class MorseCodeConverterTest
     {
         //given
         MorseCodeConverter codeConverter = new MorseCodeConverter();
-        String expression = "A QUICK WORD WITH RACHEL'S MOM?";
+        String expression = "A QUICK [WORD WITH RACHEL'S MOM]?";
 
         //when and then
         assertEquals(".- /--.- ..- .. -.-. -.- /.-- --- .-. -.. /.-- .. - .... /" +
