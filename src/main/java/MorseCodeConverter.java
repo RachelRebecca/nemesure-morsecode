@@ -19,12 +19,18 @@ public class MorseCodeConverter
         {
             String[] englishLetters = word.split("");
 
+            boolean letterTranslated = false;
             for (String letter : englishLetters)
             {
-                 String morse = morseCode.getMorseCharacters().get(letter.charAt(0));
-                 morseExpression.append(morse == null? "" : (morse + " "));
+                if (!letter.equals(""))
+                {
+                    letterTranslated = true;
+                    String morse = morseCode.getMorseCharacters().get(letter.charAt(0));
+                    morseExpression.append(morse == null ? "" : (morse + " "));
+                }
             }
-            morseExpression.append("/");
+            if (letterTranslated)
+                morseExpression.append("/");
         }
 
         return morseExpression.toString();
