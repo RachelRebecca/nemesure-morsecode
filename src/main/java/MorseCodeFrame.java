@@ -80,40 +80,12 @@ public class MorseCodeFrame extends JFrame
 
     private void onClickedTranslateToEnglish(ActionEvent actionEvent)
     {
-        if (morseExpression.getText() == null || morseExpression.getText().strip().equals(""))
-        {
-            morseExpression.setText("Make sure to enter some Morse Code before clicking on Translate To English");
-        }
-        else
-        {
-            englishExpression.setText("");
-
-            presenter.translateToEnglish(morseExpression.getText());
-
-            if (englishExpression.getText() == null || englishExpression.getText().equals(""))
-            {
-                englishExpression.setText("Couldn't translate to English");
-            }
-        }
+        presenter.translateToEnglish(morseExpression.getText());
     }
 
     private void onClickedTranslateToMorse(ActionEvent actionEvent)
     {
-        if (englishExpression.getText() == null || englishExpression.getText().strip().equals(""))
-        {
-            englishExpression.setText("Make sure to enter some English text before clicking on Translate To Morse");
-        }
-        else
-        {
-            morseExpression.setText("");
-
-            presenter.translateToMorse(englishExpression.getText());
-
-            if (morseExpression.getText() == null || morseExpression.getText().equals(""))
-            {
-                morseExpression.setText("Couldn't translate to Morse");
-            }
-        }
+        presenter.translateToMorse(englishExpression.getText());
     }
 
     private void setEnterEnglishTextArea()
@@ -141,15 +113,6 @@ public class MorseCodeFrame extends JFrame
     public JTextArea getMorseExpression()
     {
         return morseExpression;
-    }
-    public JButton getTranslateToEnglish()
-    {
-        return translateToEnglish;
-    }
-
-    public JButton getTranslateToMorse()
-    {
-        return translateToMorse;
     }
 
     public JTextArea getEnglishExpression()
