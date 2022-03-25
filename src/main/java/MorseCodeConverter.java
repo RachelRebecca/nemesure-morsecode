@@ -10,8 +10,11 @@ public class MorseCodeConverter
     public String toMorseCode(String englishExpression)
     {
         englishExpression = englishExpression.toUpperCase();
-        String morseExpression = "";
+
+        StringBuilder morseExpression = new StringBuilder();
+
         String[] englishWords = englishExpression.split(" ");
+
         for (String word : englishWords)
         {
             String[] englishLetters = word.split("");
@@ -23,20 +26,21 @@ public class MorseCodeConverter
                     String keyString = key.toString();
                     if (letter.equals(keyString))
                     {
-                        morseExpression += morseCode.getMorseCharacters().get(key) + " ";
+                        morseExpression.append(morseCode.getMorseCharacters().get(key)).append(" ");
                         break;
                     }
                 }
             }
-            morseExpression += "/";
+            morseExpression.append("/");
         }
 
-        return morseExpression;
+        return morseExpression.toString();
     }
 
     public String toEnglish(String morseExpression)
     {
-        String englishExpression = "";
+        StringBuilder englishExpression = new StringBuilder();
+
         String[] morseWords = morseExpression.split("/");
         for (String word : morseWords)
         {
@@ -48,14 +52,14 @@ public class MorseCodeConverter
                 {
                     if (morseCode.getMorseCharacters().get(key).equals(letter))
                     {
-                        englishExpression += key;
+                        englishExpression.append(key);
                         break;
                     }
                 }
             }
-            englishExpression += " ";
+            englishExpression.append(" ");
         }
 
-        return englishExpression;
+        return englishExpression.toString();
     }
 }

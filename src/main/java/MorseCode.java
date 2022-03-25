@@ -10,7 +10,7 @@ public class MorseCode
         addMorseCode();
     }
 
-    public void addMorseCode()
+    private void addMorseCode()
     {
         morseCharacters.put('A', ".-");
         morseCharacters.put('B', "-...");
