@@ -96,7 +96,7 @@ public class MorseCodeFrame extends JFrame
     {
         if (englishExpression.getText() == null || englishExpression.getText().equals(""))
         {
-            englishExpression.setText("Make sure to enter some Morse Code before clicking on Translate To English");
+            englishExpression.setText("Make sure to enter some Morse Code before clicking on Translate To Morse");
         }
         else
         {
