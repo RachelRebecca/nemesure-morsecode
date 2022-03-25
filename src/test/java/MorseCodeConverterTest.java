@@ -10,11 +10,10 @@ class MorseCodeConverterTest
         //given
         MorseCode morseCode = new MorseCode();
         MorseCodeConverter codeConverter = new MorseCodeConverter(morseCode);
-        String expression = ".- / --.- ..- .. -.-. -.- / .-- --- .-. -.. / .-- .. - .... / " +
-                ".-. .- -.-. .... . .-.. .----. .../ -- --- -- ..--..";
+        String expression = ".... . .-.. .-.. ---/.-- --- .-. .-.. -../.-.-.- -....-";
 
         //when and then
-        assertEquals("A QUICK WORD WITH RACHEL'S MOM?", codeConverter.toEnglish(expression).strip());
+        assertEquals("HELLO WORLD .-", codeConverter.toEnglish(expression).strip());
     }
 
     @Test
@@ -23,10 +22,9 @@ class MorseCodeConverterTest
         //given
         MorseCode morseCode = new MorseCode();
         MorseCodeConverter codeConverter = new MorseCodeConverter(morseCode);
-        String expression = "A QUICK [WORD WITH RACHEL'S MOM]?";
+        String expression = "HELLO WORLD! .-[]"; // completely ignore ! and []
 
         //when and then
-        assertEquals(".- /--.- ..- .. -.-. -.- /.-- --- .-. -.. /.-- .. - .... /" +
-                ".-. .- -.-. .... . .-.. .----. ... /-- --- -- ..--.. /", codeConverter.toMorseCode(expression));
+        assertEquals(".... . .-.. .-.. --- /.-- --- .-. .-.. -.. /.-.-.- -....- /", codeConverter.toMorseCode(expression));
     }
 }

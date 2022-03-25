@@ -3,11 +3,14 @@ import java.util.HashMap;
 public class MorseCode
 {
     private final HashMap<Character, String> morseCharacters;
+    private final HashMap<String, Character> morseCharactersOtherDirection;
 
     public MorseCode()
     {
         morseCharacters = new HashMap<>();
         addMorseCode();
+        morseCharactersOtherDirection = new HashMap<>();
+        addOtherDirection();
     }
 
     private void addMorseCode()
@@ -58,8 +61,61 @@ public class MorseCode
         morseCharacters.put('"', ".-..-.");
     }
 
+    public void addOtherDirection()
+    {
+        morseCharactersOtherDirection.put(".-", 'A');
+        morseCharactersOtherDirection.put("-...", 'B');
+        morseCharactersOtherDirection.put("-.-.", 'C');
+        morseCharactersOtherDirection.put("-..", 'D');
+        morseCharactersOtherDirection.put(".", 'E');
+        morseCharactersOtherDirection.put("..-.", 'F');
+        morseCharactersOtherDirection.put("--.", 'G');
+        morseCharactersOtherDirection.put("....", 'H');
+        morseCharactersOtherDirection.put("..", 'I');
+        morseCharactersOtherDirection.put(".---", 'J');
+        morseCharactersOtherDirection.put("-.-", 'K');
+        morseCharactersOtherDirection.put(".-..", 'L');
+        morseCharactersOtherDirection.put("--", 'M');
+        morseCharactersOtherDirection.put("-.", 'N');
+        morseCharactersOtherDirection.put("---", 'O');
+        morseCharactersOtherDirection.put(".--.", 'P');
+        morseCharactersOtherDirection.put("--.-", 'Q');
+        morseCharactersOtherDirection.put(".-.", 'R');
+        morseCharactersOtherDirection.put("...", 'S');
+        morseCharactersOtherDirection.put("-", 'T');
+        morseCharactersOtherDirection.put("..-", 'U');
+        morseCharactersOtherDirection.put("...-", 'V');
+        morseCharactersOtherDirection.put(".--", 'W');
+        morseCharactersOtherDirection.put("-..-", 'X');
+        morseCharactersOtherDirection.put("-.--", 'Y');
+        morseCharactersOtherDirection.put("--..", 'Z');
+        morseCharactersOtherDirection.put("-----", '0');
+        morseCharactersOtherDirection.put(".----", '1');
+        morseCharactersOtherDirection.put("..---", '2');
+        morseCharactersOtherDirection.put("...--", '3');
+        morseCharactersOtherDirection.put("....-", '4');
+        morseCharactersOtherDirection.put(".....", '5');
+        morseCharactersOtherDirection.put("-....", '6');
+        morseCharactersOtherDirection.put("--...", '7');
+        morseCharactersOtherDirection.put("---..", '8');
+        morseCharactersOtherDirection.put("----.", '9');
+        morseCharactersOtherDirection.put(".-.-.-", '.');
+        morseCharactersOtherDirection.put("--..--", ',');
+        morseCharactersOtherDirection.put("---...", ':');
+        morseCharactersOtherDirection.put("..--..", '?');
+        morseCharactersOtherDirection.put(".----.", '\'');
+        morseCharactersOtherDirection.put("-....-", '-');
+        morseCharactersOtherDirection.put("-..-.", '/');
+        morseCharactersOtherDirection.put(".-..-.", '"');
+    }
+
     public HashMap<Character, String> getMorseCharacters()
     {
         return this.morseCharacters;
+    }
+
+    public HashMap<String, Character> getMorseCharactersOtherDirection()
+    {
+        return this.morseCharactersOtherDirection;
     }
 }

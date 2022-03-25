@@ -22,7 +22,7 @@ public class MorseCodeConverter
             for (String letter : englishLetters)
             {
                  String morse = morseCode.getMorseCharacters().get(letter.charAt(0));
-                 morseExpression.append(morse == null? "" : morse + " ");
+                 morseExpression.append(morse == null? "" : (morse + " "));
             }
             morseExpression.append("/");
         }
@@ -41,18 +41,12 @@ public class MorseCodeConverter
 
             for (String letter : morseLetters)
             {
-                for (Character key : morseCode.getMorseCharacters().keySet())
-                {
-                    if (morseCode.getMorseCharacters().get(key).equals(letter))
-                    {
-                        englishExpression.append(key);
-                        break;
-                    }
-                }
+                Character english = morseCode.getMorseCharactersOtherDirection().get(letter);
+                englishExpression.append(english == null ? "" : english);
             }
             englishExpression.append(" ");
         }
 
-        return englishExpression.toString();
+        return englishExpression.toString().strip();
     }
 }
