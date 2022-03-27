@@ -25,7 +25,7 @@ public class MorseCodeConverter
                 if (!letter.equals(""))
                 {
                     letterTranslated = true;
-                    String morse = morseCode.getMorseCharacters().get(letter.charAt(0));
+                    String morse = morseCode.translateFromEnglishToMorse(letter);
                     morseExpression.append(morse == null ? "" : (morse + " "));
                 }
             }
@@ -49,7 +49,7 @@ public class MorseCodeConverter
 
             for (String letter : morseLetters)
             {
-                Character english = morseCode.getMorseCharactersOtherDirection().get(letter);
+                Character english = morseCode.translateFromMorseToEnglish(letter);
                 englishExpression.append(english == null ? "" : english);
             }
             englishExpression.append(" ");

@@ -109,13 +109,14 @@ public class MorseCode
         morseCharactersOtherDirection.put(".-..-.", '"');
     }
 
-    public HashMap<Character, String> getMorseCharacters()
+    public String translateFromEnglishToMorse(String letter)
     {
-        return this.morseCharacters;
+        Character charLetter = letter.charAt(0);
+        return morseCharacters.get(charLetter);
     }
 
-    public HashMap<String, Character> getMorseCharactersOtherDirection()
+    public Character translateFromMorseToEnglish(String morse)
     {
-        return this.morseCharactersOtherDirection;
+        return morseCharactersOtherDirection.get(morse);
     }
 }
