@@ -20,7 +20,7 @@ public class MorseCodePresenter
             view.setEnglishExpressionText("");
             String english = model.toEnglish(expression);
             view.setEnglishExpressionText(english);
-            if (view.getEnglishExpressionText() == null || view.getEnglishExpressionText().equals(""))
+            if (english == null || english.equals(""))
             {
                 view.setEnglishExpressionText("Couldn't translate to English");
             }
@@ -39,7 +39,7 @@ public class MorseCodePresenter
             view.setMorseExpressionText("");
             String morse = model.toMorseCode(expression);
             view.setMorseExpressionText(morse);
-            if (view.getMorseExpressionText() == null || view.getMorseExpressionText().equals(""))
+            if (morse == null || morse.equals(""))
             {
                 view.setMorseExpressionText("Couldn't translate to Morse");
             }
