@@ -11,9 +11,6 @@ public class MorseCodeFrame extends JFrame
     private JTextArea morseExpression;
     private JTextArea englishExpression;
 
-    private JButton translateToMorse;
-    private JButton translateToEnglish;
-
     public final static String morsePlacementText = "Enter Morse Code here " +
             "(Use spaces to separate letters and / to separate words)";
     public final static String englishPlacementText = "Enter English text here";
@@ -66,12 +63,12 @@ public class MorseCodeFrame extends JFrame
     {
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new FlowLayout());
-        translateToEnglish = new JButton();
+        JButton translateToEnglish = new JButton();
         translateToEnglish.setText("Translate to English");
         translateToEnglish.addActionListener(this::onClickedTranslateToEnglish);
         buttonPanel.add(translateToEnglish);
 
-        translateToMorse = new JButton();
+        JButton translateToMorse = new JButton();
         translateToMorse.setText("Translate to Morse");
         translateToMorse.addActionListener(this::onClickedTranslateToMorse);
         buttonPanel.add(translateToMorse);

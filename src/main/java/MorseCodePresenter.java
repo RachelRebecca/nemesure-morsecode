@@ -1,7 +1,7 @@
 public class MorseCodePresenter
 {
-    private MorseCodeFrame view;
-    private MorseCodeConverter model;
+    private final MorseCodeFrame view;
+    private final MorseCodeConverter model;
 
     public MorseCodePresenter(MorseCodeFrame view, MorseCodeConverter model)
     {
