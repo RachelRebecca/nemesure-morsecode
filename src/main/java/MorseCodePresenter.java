@@ -11,7 +11,7 @@ public class MorseCodePresenter
 
     public void translateToEnglish(String expression)
     {
-        if (view.getMorseExpressionText() == null || view.getMorseExpressionText().strip().equals(""))
+        if (expression == null || expression.strip().equals(""))
         {
             view.setMorseExpressionText("Make sure to enter some Morse Code before clicking on Translate To English");
         }
@@ -30,7 +30,7 @@ public class MorseCodePresenter
 
     public void translateToMorse(String expression)
     {
-        if (view.getEnglishExpressionText() == null || view.getEnglishExpressionText().strip().equals(""))
+        if (expression == null || expression.strip().equals(""))
         {
             view.setEnglishExpressionText("Make sure to enter some English text before clicking on Translate To Morse");
         }
