@@ -17,6 +17,9 @@ class MorseCodePresenterTest
         String morseExpression = ".... . .-.. .-.. --- /.-- --- .-. .-.. -.. /";
         frame.setMorseExpressionText(morseExpression);
         frame.setEnglishExpressionText("");
+        doReturn(morseExpression).when(frame).getMorseExpressionText();
+        doReturn("").when(frame).getEnglishExpressionText();
+        doReturn("HELLO WORLD").when(converter).toEnglish(morseExpression);
 
         //when
         presenter.translateToEnglish(morseExpression);
