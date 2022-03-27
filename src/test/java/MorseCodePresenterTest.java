@@ -31,6 +31,21 @@ class MorseCodePresenterTest
     @Test
     public void translateToMorse()
     {
+        //given
+        String englishExpression = "HELLO WORLD";
+        String morseExpression = ".... . .-.. .-.. --- /.-- --- .-. .-.. -.. /";
 
+        frame.setEnglishExpressionText(englishExpression);
+        frame.setMorseExpressionText("");
+
+        doReturn(englishExpression).when(frame).getEnglishExpressionText();
+        doReturn("").when(frame).getMorseExpressionText();
+        doReturn(morseExpression).when(converter).toMorseCode(englishExpression);
+
+        //when
+        presenter.translateToMorse(englishExpression);
+
+        //then
+        verify(frame).setMorseExpressionText(morseExpression);
     }
 }
