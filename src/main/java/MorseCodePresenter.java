@@ -17,7 +17,6 @@ public class MorseCodePresenter
         }
         else
         {
-            view.setEnglishExpressionText("");
             String english = model.toEnglish(expression);
             view.setEnglishExpressionText(english);
             if (english == null || english.equals(""))
@@ -36,7 +35,6 @@ public class MorseCodePresenter
         }
         else
         {
-            view.setMorseExpressionText("");
             String morse = model.toMorseCode(expression);
             view.setMorseExpressionText(morse);
             if (morse == null || morse.equals(""))
