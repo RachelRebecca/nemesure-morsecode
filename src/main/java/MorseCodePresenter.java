@@ -13,9 +13,9 @@ public class MorseCodePresenter
     {
         if (expression == null || expression.strip().equals(""))
         {
-            view.setMorseExpressionText("Make sure to enter some Morse Code before clicking on Translate To English");
-        }
-        else
+            view.setMorseExpressionText("Make sure to enter some Morse Code "
+                    + "before clicking on Translate To English");
+        } else
         {
             String english = model.toEnglish(expression);
             view.setEnglishExpressionText(english);
@@ -31,9 +31,9 @@ public class MorseCodePresenter
     {
         if (expression == null || expression.strip().equals(""))
         {
-            view.setEnglishExpressionText("Make sure to enter some English text before clicking on Translate To Morse");
-        }
-        else
+            view.setEnglishExpressionText("Make sure to enter some English text "
+                    + "before clicking on Translate To Morse");
+        } else
         {
             String morse = model.toMorseCode(expression);
             view.setMorseExpressionText(morse);
