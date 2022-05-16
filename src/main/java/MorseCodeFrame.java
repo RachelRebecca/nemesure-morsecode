@@ -109,9 +109,9 @@ public class MorseCodeFrame extends JFrame
 
     public static void main(String[] args)
     {
-        JFrame jFrame = new MorseCodeFrame();
+        JFrame frame = new MorseCodeFrame();
 
-        jFrame.setVisible(true);
+        frame.setVisible(true);
     }
 
 }
