@@ -11,6 +11,7 @@ public class MorseCode
         morseToEnglish = new HashMap<>();
         addMorseAndEnglish();
     }
+
     private void addMorseAndEnglish()
     {
         addMorseAndEnglish('A', ".-");
