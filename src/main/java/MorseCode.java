@@ -9,7 +9,6 @@ public class MorseCode
     {
         englishToMorse = new HashMap<>();
         morseToEnglish = new HashMap<>();
-
         addMorseAndEnglish();
     }
     private void addMorseAndEnglish()
