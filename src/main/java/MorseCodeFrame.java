@@ -89,12 +89,13 @@ public class MorseCodeFrame extends JFrame
         setEnterTextArea(horizontalPanel2, englishExpression, englishPlacementText);
     }
 
-    private void setEnterTextArea(JPanel horizontalPanel, JTextArea expression, String placementText)
+    private void setEnterTextArea
+            (JPanel horizontalPanel, JTextArea expression, String placementText)
     {
         horizontalPanel.setLayout(new FlowLayout());
         expression.setText(placementText);
-        expression.setColumns (60);
-        expression.setLineWrap (true);
+        expression.setColumns(60);
+        expression.setLineWrap(true);
         horizontalPanel.add(expression);
         verticalPanel.add(horizontalPanel);
     }
