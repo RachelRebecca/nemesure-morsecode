@@ -50,13 +50,10 @@ public class MorseCodeFrame extends JFrame
     private void setEnterMorseCodeTextArea()
     {
         JPanel horizontalPanel1 = new JPanel();
-        horizontalPanel1.setLayout(new FlowLayout());
+
         morseExpression = new JTextArea();
-        morseExpression.setText(morsePlacementText);
-        morseExpression.setColumns (60);
-        morseExpression.setLineWrap (true);
-        horizontalPanel1.add(morseExpression);
-        verticalPanel.add(horizontalPanel1);
+
+        setEnterTextArea(horizontalPanel1, morseExpression, morsePlacementText);
     }
 
     private void setButtons()
@@ -88,13 +85,18 @@ public class MorseCodeFrame extends JFrame
     private void setEnterEnglishTextArea()
     {
         JPanel horizontalPanel2 = new JPanel();
-        horizontalPanel2.setLayout(new FlowLayout());
         englishExpression = new JTextArea();
-        englishExpression.setText(englishPlacementText);
-        englishExpression.setColumns (60);
-        englishExpression.setLineWrap (true);
-        horizontalPanel2.add(englishExpression);
-        verticalPanel.add(horizontalPanel2);
+        setEnterTextArea(horizontalPanel2, englishExpression, englishPlacementText);
+    }
+
+    private void setEnterTextArea(JPanel horizontalPanel, JTextArea expression, String placementText)
+    {
+        horizontalPanel.setLayout(new FlowLayout());
+        expression.setText(placementText);
+        expression.setColumns (60);
+        expression.setLineWrap (true);
+        horizontalPanel.add(expression);
+        verticalPanel.add(horizontalPanel);
     }
 
     public void setMorseExpressionText(String text)
